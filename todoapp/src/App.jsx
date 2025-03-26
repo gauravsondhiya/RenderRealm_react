@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { v4 as uuidv4 } from 'uuid';
 function App() {
   let [invalue, setinvalue] = useState("");
 
@@ -7,9 +7,10 @@ function App() {
 
   function clicker() {
     if (!invalue == "") {
-      setOutvalue([...outvalue, invalue]);
+      setOutvalue([...outvalue,{id:uuidv4(),value:invalue}]);
       setinvalue("");
     }
+  
   }
   return (
     <>
@@ -22,11 +23,11 @@ function App() {
       <button onClick={clicker}>Add Todo</button>
       <div>
         {outvalue.map((e) => (
-          <div key={Math.random()} style={{ display: "flex", gap: "30px" }}>
-            <p>{e}</p>
+          <div key={e.id} style={{ display: "flex", gap: "30px" }}>
+            <p>{e.value}</p>
             <button
               onClick={() => {
-                let ans = outvalue.filter((v)=>{return e!=v })
+                let ans = outvalue.filter((v)=>{return e.id!=v.id })
                 setOutvalue(ans);
               }}
             >
