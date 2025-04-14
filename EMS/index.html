@@ -1,46 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
     <div id="header">
-        <h1>Employee Management System</h1>
-        <button id="buttonemp">ADD EMP</button>
-        <div id="overlay">
-            <div id="loginform">
-                <button id="btnclose">❌</button>
-                <form action="">
-                    <label for="">Username</label>        
-                    <input type="text">
-                    <label for="">password </label>
-                    <input type="text">
-                    <input type="submit">
-                </form>
-            </div>
-        </div>
-       
-    </div>
-   
-    <div id="MainBox">
-        <div id="box1">
-           <h2>Employee List</h2>
-           <hr/>
-           <div id="dataoutput">
-
-           </div>
-        </div>
-        <div id="box2">
-            <h2>Employee Information</h2>
+      <h1>Employee Management System</h1>
+      <button id="buttonemp">ADD EMP</button>
+      <div id="overlay">
+        <div id="loginform">
+            <button id="btnclose">❌</button>
+         <hr>
+          <form action="">
+            <label for="">Image</label>
+            <input id="imageup" type="text" />
+            <!-- <input type="file" id="image" name="image" accept="image/*"> -->
+            <hr>
+            <label for="">Name</label>
+            <input id="name" type="text" />
+            <hr>
+            <label for="">address </label>
+            <input id="address" type="text" />
+            <hr>
+            <label for="">DOB</label>
+            <input id="dob" type="text" />
+            <hr>
+            <label for="">mobile </label>
+            <input id="mobile" type="text" />
             <hr/>
-            <div id="secondscreenbox">
-
-            </div>
+            <input type="submit" />
+          </form>
         </div>
+      </div>
     </div>
+
+    <div id="MainBox">
+      <div id="box1">
+        <h2>Employee List</h2>
+        <hr />
+        <div id="dataoutput"></div>
+      </div>
+      <div id="box2">
+        <h2>Employee Information</h2>
+        <hr />
+        <div id="secondscreenbox"></div>
+      </div>
+    </div>
+    
     <script src="index.js"></script>
-</body>
+  </body>
 </html>

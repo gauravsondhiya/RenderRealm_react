@@ -1,4 +1,8 @@
-
+#image{
+     height: 150px;
+     border-radius: 50%;
+     width: 150px;
+}
 
 #header{
     display: flex;
@@ -62,6 +66,3 @@
     box-shadow: 5px 5px 5px 5px grey;
     /* transform:translate(-50%,-50%); */
 }
-#loginform span{
-   cursor: pointer;
-} */
