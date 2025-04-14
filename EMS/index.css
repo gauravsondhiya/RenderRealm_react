@@ -1,13 +1,15 @@
+
+
 #header{
     display: flex;
     justify-content:space-around;
 
 }
-#buttonemp{
+/* #buttonemp{
    width: 150px;
    height: 50px;
    margin: auto;
-}
+} */
 
 #MainBox{
     display: flex;
@@ -29,7 +31,7 @@
 }
 #dataoutput{
  
-    border:so
+   
 }
 
 #inbox{
@@ -40,3 +42,26 @@
     background-color: rgb(227, 232, 242);
     border-radius:25px;
 }
+
+#overlay{
+    width: 100%;
+    height: 100vh;
+    position:fixed;
+    top: 0;
+    /* z-index: -1;
+    opacity: 0 ; */
+    background-color: blanchedalmond;
+}
+#loginform{
+     width:300px;
+     padding: 30px;
+     background-color: white;
+     border:solid 1px red;
+    margin: auto;
+    /* top:-50%; */
+    box-shadow: 5px 5px 5px 5px grey;
+    /* transform:translate(-50%,-50%); */
+}
+#loginform span{
+   cursor: pointer;
+} */
