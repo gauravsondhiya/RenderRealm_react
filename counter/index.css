@@ -1,0 +1,33 @@
+/* *{
+    background-color: rgb(24, 20, 20);
+    color:white;
+} */
+
+#mainbox{
+    display: flex;
+    flex-direction: column;
+  margin-top: 150px;
+    /* border:solid 1px red; */
+  align-items: center;
+  
+
+}
+
+#timerbox{
+    display: flex;
+    /* border:solid 1px red; */
+   text-align: center;
+}
+#timerbox input{
+    border:0px 
+}
+
+#btnbox{
+    margin-top: 15px;
+}
+
+#btnbox button{
+    width: 150px;
+    height: 25px;
+    margin-left: 5px;
+}

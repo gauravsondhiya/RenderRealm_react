@@ -1,43 +1,31 @@
 import React, { useState } from "react";
-import { v4 as uuidv4 } from 'uuid';
-function App() {
-  let [invalue, setinvalue] = useState("");
+import { v4 as uuidv4 } from "uuid";
 
-  let [outvalue, setOutvalue] = useState([]);
-
-  function clicker() {
-    if (!invalue == "") {
-      setOutvalue([...outvalue,{id:uuidv4(),value:invalue}]);
-      setinvalue("");
-    }
+const App = () => {
+  let [inputvalue, setinputvalue] = useState();
+  let [output, setoutput] = useState([]);
   
+  let updater = () => {
+    setoutput([...output, inputvalue]);
+  };
+
+  let deleted=(e)=>{
+    console.log(e)
   }
   return (
     <>
-      <h1>Todo app</h1>
-      <input
-        type="text"
-        value={invalue}
-        onChange={(e) => setinvalue(e.target.value)}
-      />
-      <button onClick={clicker}>Add Todo</button>
-      <div>
-        {outvalue.map((e) => (
-          <div key={e.id} style={{ display: "flex", gap: "30px" }}>
-            <p>{e.value}</p>
-            <button
-              onClick={() => {
-                let ans = outvalue.filter((v)=>{return e.id!=v.id })
-                setOutvalue(ans);
-              }}
-            >
-              Done
-            </button>
-          </div>
-        ))}
-      </div>
+      <input type="text" onChange={(e) => setinputvalue(e.target.value)} />
+      <button onClick={updater}>Add Todo</button>
+      {output.map((e) => (
+        <div key={uuidv4()}>
+          <p>{e}</p>
+          <button onClick={(v)=>{
+            console.log(v)
+          }}>❌</button>
+        </div>
+      ))}
     </>
   );
-}
+};
 
 export default App;
