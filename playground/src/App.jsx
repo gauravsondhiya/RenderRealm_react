@@ -1,10 +1,11 @@
-import "./App.css";
+import React from 'react'
 
-function App() {
-  return <Wrapper>valuesdone </Wrapper>;
-}
-function Wrapper({ children }) {
-  return <div style={{ border: "solid 2px black" ,padding:"20px"}}>{children}</div>;
+const App = () => {
+  return (
+    <div>
+      
+    </div>
+  )
 }
 
-export default App;
+export default App
